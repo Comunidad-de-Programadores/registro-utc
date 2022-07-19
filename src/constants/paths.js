@@ -3,4 +3,7 @@ export const routerPaths = {
   myDevices: '/docente/my-devices',
   myProfile: '/docente/my-profile',
   logIn: '/login',
+  menu: '/docente/menu',
+  PrivacyPolicies: '/docente/privacy-policies',
+  RecordHistory: '/docente/record-history',
 };

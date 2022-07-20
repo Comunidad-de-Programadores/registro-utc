@@ -1,23 +1,13 @@
-import React from 'react';
-
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
 import {
-  Button,
-  Input,
-  InputAdornment,
+  Paper,
   Table,
   TableBody,
   TableCell,
   TableContainer,
   TableHead,
   TableRow,
-  TextField,
 } from '@mui/material';
-import { Box } from '@mui/system';
-import Paper from '@mui/material/Paper';
+import React from 'react';
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -31,48 +21,11 @@ const rows = [
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
-export const LogBook = () => {
-  const [age, setAge] = React.useState('');
-
+export const UsersManagement = () => {
   return (
     <div>
-      <h2 className='text-center mb-5'>Bitacora de Registros</h2>
-      <Box
-        component='form'
-        sx={{
-          '& > :not(style)': { m: 1, width: '25ch', marginBottom: '4rem' },
-        }}
-        noValidate
-        autoComplete='off'>
-        <FormControl>
-          <InputLabel htmlFor='age-simple'>Plantel</InputLabel>
-          <Select
-            // value={age}
-            // onChange={(e: SelectChangeEvent) => setAge(e.target.value)}
-            input={<Input name='age' id='age-simple' />}>
-            <MenuItem value=' '>
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Niza</MenuItem>
-            <MenuItem value={20}>Hr</MenuItem>
-            <MenuItem value={30}>Londres</MenuItem>
-          </Select>
-        </FormControl>
-        <TextField
-          id='date'
-          label='Fecha'
-          type='date'
-          defaultValue='2017-05-24'
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
-        <Button variant='contained' color='primary'>
-          Buscar
-        </Button>
-      </Box>
-
-      <TableContainer component={Paper}>
+      <h2 className='text-center mb-5'>Gestion de usuarios</h2>
+      <TableContainer component={Paper} sx={{ boxShadow: '2px 2px 2px 1px rgba(0, 0, 0, 0.2);' }}>
         <Table sx={{ minWidth: 650 }} aria-label='simple table'>
           <TableHead>
             <TableRow>

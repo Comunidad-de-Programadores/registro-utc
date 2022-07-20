@@ -230,3 +230,31 @@ footer {
   transition: all 0.3s ease;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
+
+.pro-sidebar > .pro-sidebar-inner {
+  background: #2f3f4e !important;
+  height: 100%;
+  position: relative;
+  z-index: 101;
+  color: #fff !important;
+}
+
+.pro-sidebar .pro-menu > ul > .pro-sub-menu > .pro-inner-list-item {
+  position: relative;
+  background-color: #2f3f4e !important;
+}
+
+.pro-sidebar {
+  /* color: blue !important; */
+  height: 100%;
+  width: 250px !important;
+  min-width: 150px !important;
+  text-align: left;
+  transition: width, left, right, 0.3s;
+  position: relative;
+  z-index: 1009;
+}
+
+.pro-sidebar .pro-menu.shaped .pro-menu-item > .pro-inner-item > .pro-icon-wrapper {
+  background-color: #2f3f4e !important;
+}

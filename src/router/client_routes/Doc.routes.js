@@ -16,6 +16,7 @@ export const DocRoutes = () => {
         <Route path='/menu' element={<Menu />}></Route>
         <Route path='/privacy-policies' element={<PrivacyPolicies />}></Route>
         <Route path='/record-history' element={<RecordHistory />}></Route>
+        <Route path='*' element={<Home />}></Route>
       </Routes>
     </AppLayout>
   );

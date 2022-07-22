@@ -7,7 +7,8 @@ import home from '../../assets/house-door-fill.svg';
 import user from '../../assets/person-fill.svg';
 import list from '../../assets/list-task.svg';
 import menu from '../../assets/list.svg';
-import back from '../../assets/arrow-left-short.svg';
+import { Button } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 export const AppLayout = ({ children }) => {
   const navegate = useNavigate();
@@ -15,7 +16,12 @@ export const AppLayout = ({ children }) => {
   return (
     <>
       <header style={styles.header}>
-        <img src={back} alt='back' className='mx-3' onClick={() => navegate(-1)} />
+        <Button
+          onClick={() => {
+            navegate(-1);
+          }}>
+          <ArrowBackIcon sx={{ color: 'white' }} />
+        </Button>
         <h1 style={styles.title}>Registro Utc</h1>
       </header>
       <main style={styles.main}>{children}</main>

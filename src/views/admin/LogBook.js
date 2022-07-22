@@ -19,8 +19,8 @@ import {
 import { Box } from '@mui/system';
 import Paper from '@mui/material/Paper';
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(name, equipo, origenDestino, fecha) {
+  return { name, equipo, origenDestino, fecha };
 }
 
 const rows = [

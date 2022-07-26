@@ -2,6 +2,6 @@ const { Router } = require('express');
 
 const router = Router();
 
-router.post('/docente');
+router.post('/docente/mydevices', addDevice);
 
 exports.module = { router };

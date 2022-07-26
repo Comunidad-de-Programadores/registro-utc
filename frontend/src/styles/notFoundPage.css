@@ -15,15 +15,7 @@ body {
   margin: 0px;
   flex-direction: column;
 } */
-p {
-  font-family: 'Comfortaa', cursive;
-  font-size: 30px;
-  text-align: center;
-}
-a {
-  color: red;
-  text-decoration: none;
-}
+
 .not-found {
   /* background-color: black;
   color: white; */

@@ -22,7 +22,7 @@ export const LogIn = () => {
             alt='logo'
           />
 
-          <div className='inputs'>
+          <div className='inputs' style={styles.divButton}>
             <LoginMicrosoft handleLogin={handleLogin} />
           </div>
         </div>
@@ -36,5 +36,9 @@ const styles = {
     fontSize: '2rem',
     fontWeight: 'bold',
     color: '#ff6300',
+  },
+  divButton: {
+    display: 'flex',
+    marginTop: '5rem',
   },
 };

@@ -10,6 +10,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { LoginMicrosoft } from '../../components/ui/LoginMicrosoft';
+import { useNavigate } from 'react-router-dom';
 
 function Copyright(props) {
   return (
@@ -26,14 +27,12 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export default function SignInSide() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+export const SignIn = () => {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    console.log('login');
+    navigate('/cms/logBook');
   };
 
   return (
@@ -69,8 +68,8 @@ export default function SignInSide() {
             <Typography component='h1' variant='h5'>
               Inicio de sesión
             </Typography>
-            <Box component='form' noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
-              <LoginMicrosoft />
+            <Box component='form' noValidate sx={{ mt: 1 }}>
+              <LoginMicrosoft handleLogin={handleLogin} />
               <Copyright sx={{ mt: 5 }} />
             </Box>
           </Box>
@@ -78,4 +77,4 @@ export default function SignInSide() {
       </Grid>
     </ThemeProvider>
   );
-}
+};

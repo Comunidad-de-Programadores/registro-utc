@@ -1,7 +1,13 @@
 const { request, response } = require('express');
 
+const { HTTP_response } = require('../handlers/message.handler');
+
 exports.addDevice = async (req = request, res = response) => {
 	const { nombre_dispositivo, marca_dispositivo, matricula } = req.body;
 	try {
-	} catch (error) {}
+		return HTTP_response(req, res, 500, 'Error al agregar el dispositivo', {}, false);
+	} catch (error) {
+		console.log(error);
+		return HTTP_response(req, res, 500, 'Error al agregar el dispositivo', {}, false);
+	}
 };

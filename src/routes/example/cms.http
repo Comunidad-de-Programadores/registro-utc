@@ -1,0 +1,28 @@
+### To execute the requests it is necessary to have installed
+###  the REST CLIENT extension for VSCode
+
+###         Host
+@API = http://127.0.0.1:4000/api
+
+
+### create a user
+POST {{API}}/cms/new-user
+Content-Type: application/json
+
+{
+    "nombre": "Alexxxxx",
+		"apellido_materno": "Montes de Ocaxxx",
+		"apellido_paterno": "Pérezxxx",
+		"usuario": "lamopx",
+		"contrasena": "lamopx",
+		"plantel": "niza",
+		"tipo_usuario": "admin"
+}
+
+### get all users
+GET {{API}}/cms/get-users
+Content-Type: application/json
+
+{
+
+}

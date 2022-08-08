@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const { addDevice } = require('../controllers/docente.controller');
 
 const router = Router();
 

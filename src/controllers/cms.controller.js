@@ -16,6 +16,8 @@ const PLANTEL = {
 	hill: 4,
 };
 
+//TODO: GENERAR TODO EL CRUD DE USUARIOS
+
 exports.createNewUser = async (req = request, res = response) => {
 	const {
 		nombre,

@@ -1,14 +1,14 @@
 const { request, response } = require('express');
 
-exports.HTTP_response = ({
+exports.HTTP_response = (
 	req = request,
 	res = response,
 	status = 200,
 	message,
 	data,
 	success,
-}) => {
-	logRequestInfo({ req, message, data, success });
+) => {
+	logRequestInfo(req, message, data, success);
 	res.status(status).send({
 		success,
 		message,
@@ -16,7 +16,7 @@ exports.HTTP_response = ({
 	});
 };
 
-const logRequestInfo = ({ req = request, message = '', data = {}, success = true }) => {
+const logRequestInfo = (req = request, message = '', data = {}, success = true) => {
 	const url = req.url ? req.url.slice(0, 100) : 'Sin URL';
 	const cleanBody = req.body ? handleAllObjects(req.body) : 'Sin body';
 	const cleanMessage = message ? handleAllObjects(message) : 'Sin Mensaje';

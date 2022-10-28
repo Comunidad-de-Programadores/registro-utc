@@ -1,22 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.0e5422c1.css",
-    "main.js": "/static/js/main.b04ed2fb.js",
+    "main.css": "/static/css/main.e1ecfd78.css",
+    "main.js": "/static/js/main.e83fdb78.js",
     "index.html": "/index.html",
     "static/media/calendar-date.svg": "/static/media/calendar-date.97195a8d3439ede537d8da9bc442d84b.svg",
-    "static/media/list-task.svg": "/static/media/list-task.1953b76ecc75200011dc3190c5c56b0d.svg",
     "static/media/qr-code.svg": "/static/media/qr-code.979c08430743874f0865c1d229e7e9d9.svg",
-    "static/media/house-door-fill.svg": "/static/media/house-door-fill.6fccc45c392173e20f6391c5f89f8ef1.svg",
-    "static/media/list.svg": "/static/media/list.f98b98b4905b36b844a65327ecaadc32.svg",
-    "static/media/arrow-left-short.svg": "/static/media/arrow-left-short.782f45c7b80511ca7f7f580279a2b3f1.svg",
     "static/media/lock-fill.svg": "/static/media/lock-fill.e596a357c88ada8b2b99fe8d7a3cd683.svg",
     "static/media/power.svg": "/static/media/power.801d63975bfed158b4db85bb37a96fe4.svg",
     "static/media/person-fill.svg": "/static/media/person-fill.1ed022a6dfb6fb8cfe31d147d21a1044.svg",
-    "main.0e5422c1.css.map": "/static/css/main.0e5422c1.css.map",
-    "main.b04ed2fb.js.map": "/static/js/main.b04ed2fb.js.map"
+    "main.e1ecfd78.css.map": "/static/css/main.e1ecfd78.css.map",
+    "main.e83fdb78.js.map": "/static/js/main.e83fdb78.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e5422c1.css",
-    "static/js/main.b04ed2fb.js"
+    "static/css/main.e1ecfd78.css",
+    "static/js/main.e83fdb78.js"
   ]
 }

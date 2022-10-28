@@ -17,7 +17,7 @@ export const AppLayout = ({ children }) => {
 	const handleChange = newValue => setValue(newValue);
 
 	return (
-		<>
+		<div className='app'>
 			<header style={styles.header}>
 				<Button
 					onClick={() => {
@@ -30,7 +30,14 @@ export const AppLayout = ({ children }) => {
 			</header>
 			<main style={styles.main}>{children}</main>
 			<BottomNavigation
-				sx={{ width: '100%', position: 'fixed', bottom: 0 }}
+				showLabels
+				sx={{
+					width: '330px',
+					position: 'fixed',
+					bottom: 0,
+					marginLeft: 'calc(50% - 165px)',
+					marginRight: 'calc(50% - 165px)',
+				}}
 				value={value}
 				onChange={handleChange}
 			>
@@ -59,7 +66,7 @@ export const AppLayout = ({ children }) => {
 					}}
 				/>
 			</BottomNavigation>
-		</>
+		</div>
 	);
 };
 

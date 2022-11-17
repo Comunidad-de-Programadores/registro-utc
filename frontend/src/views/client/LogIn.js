@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useIsAuthenticated, useMsal } from '@azure/msal-react';
 import { InteractionRequiredAuthError, InteractionStatus } from '@azure/msal-browser';
 
@@ -12,8 +12,8 @@ import { LoginMicrosoft } from '../../components/ui/LoginMicrosoft';
 import { Button } from '@mui/material';
 
 const SignInButton = () => {
+const history = useNavigate();
 	const isAuthenticated = useIsAuthenticated();
-	const history = useHistory();
 	const { instance } = useMsal();
 
 	// const { USER } = useSelectors();
@@ -22,7 +22,7 @@ const SignInButton = () => {
 
 	const handleRedirect = () => {
 		//TODO: dependiendo el tipo de usuario, se hara redireccion a su pagina correspondiente
-		history.push('sdad');
+		history('sdad');
 	};
 
 	if (IS_DEV_ENVIROMENT) {

@@ -2,7 +2,7 @@ import {
 	REACT_APP_AUTHORITY as authority,
 	REACT_APP_CLIENT_ID as clientId,
 	REACT_APP_REDIRECT as redirectUri,
-} from '../constans/sso.constants';
+} from '../constants/sso.constants';
 
 // Browser check variables
 // If you support IE, our recommendation is that you sign-in using Redirect APIs

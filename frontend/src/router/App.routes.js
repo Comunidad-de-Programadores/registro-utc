@@ -8,7 +8,7 @@ import { AdminRoutesUser } from './admin_routes/Admin.routes';
 
 export const AppRoutes = () => {
 	return (
-		<BrowserRouter>
+
 			<Routes>
 				<Route path='/auth/*' element={<AuthRoutes />}></Route>
 				<Route path='/docente/*' element={<DocRoutes />}></Route>
@@ -16,6 +16,6 @@ export const AppRoutes = () => {
 				<Route path='/cms/*' element={<AdminRoutesUser />}></Route>
 				<Route path='*' element={<AuthRoutes />}></Route>
 			</Routes>
-		</BrowserRouter>
+
 	);
 };

@@ -7,7 +7,15 @@ const authJWT = require('./middlewares/auth.middleware');
 require('dotenv').config({ path: '.env' });
 require('./db/config/db.config');
 
-const { NODE_ENV, PORT, REACT_APP_API_URL, API } = process.env;
+const {
+	API,
+	NODE_ENV,
+	PORT,
+	REACT_APP_API_URL,
+	REACT_APP_AUTHORITY,
+	REACT_APP_CLIENT_ID,
+	REACT_APP_REDIRECT,
+} = process.env;
 
 const app = express();
 
@@ -36,7 +44,14 @@ app.engine('html', require('ejs').renderFile);
 app.use('/static', express.static(path.join(__dirname, `${buildFolder}/static`)));
 
 //Redirect any path to index.html
-app.use('*', (req, res) => res.status(200).render('index.html', { REACT_APP_API_URL }));
+app.use('*', (req, res) =>
+	res.status(200).render('index.html', {
+		REACT_APP_API_URL,
+		REACT_APP_AUTHORITY,
+		REACT_APP_CLIENT_ID,
+		REACT_APP_REDIRECT,
+	}),
+);
 
 //inicializa el web-server y dentro tambien inicializa la conexión a la BD
 app.listen(port, () => {

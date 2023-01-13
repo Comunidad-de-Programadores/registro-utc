@@ -12,7 +12,7 @@ import { LoginMicrosoft } from '../../components/ui/LoginMicrosoft';
 import { Button } from '@mui/material';
 
 const SignInButton = () => {
-const history = useNavigate();
+	const history = useNavigate();
 	const isAuthenticated = useIsAuthenticated();
 	const { instance } = useMsal();
 
@@ -26,7 +26,17 @@ const history = useNavigate();
 	};
 
 	if (IS_DEV_ENVIROMENT) {
-		return <Button onClick={handleRedirect}>Ir a Onboarding</Button>;
+		return (
+			<button
+				className='button w-100 button--microsoft text-white shadow-lg'
+				onClick={() => {
+					handleLogin();
+				}}
+				type='button'
+			>
+				Login With Microsoft 365
+			</button>
+		);
 	}
 
 	return (
@@ -34,7 +44,12 @@ const history = useNavigate();
 			{isAuthenticated ? (
 				<Button onClick={handleRedirect}>Ir a ...</Button>
 			) : (
-				<Button onClick={handleLogin}>Continuar con Microsoft</Button>
+				<Button
+					className='button w-100 button--microsoft text-white shadow-lg'
+					onClick={handleLogin}
+				>
+					Continuar con Microsoft
+				</Button>
 			)}
 		</>
 	);
@@ -76,7 +91,7 @@ export const LogIn = () => {
 			.then(tokenResponse => {
 				//TODO: guardar info de usuario en el STORE REDUX
 				// setUserCountry(tokenResponse.account.idTokenClaims.ctry);
-				console.log({tokenResponse})
+				console.log({ tokenResponse });
 			})
 			.catch(error => {
 				if (error instanceof InteractionRequiredAuthError)
@@ -118,8 +133,7 @@ export const LogIn = () => {
 					/>
 
 					<div className='inputs' style={styles.divButton}>
-						<LoginMicrosoft handleLogin={handleLogin} />
-						<SignInButton />
+						<SignInButton onClick={handleLogin} />
 					</div>
 				</div>
 			</div>

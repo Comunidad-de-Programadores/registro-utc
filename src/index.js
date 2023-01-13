@@ -50,6 +50,7 @@ app.use('*', (req, res) =>
 		REACT_APP_AUTHORITY,
 		REACT_APP_CLIENT_ID,
 		REACT_APP_REDIRECT,
+		NODE_ENV,
 	}),
 );
 
